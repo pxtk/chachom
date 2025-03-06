@@ -3,6 +3,16 @@
   margin: 0;
   /* justify-content: center; */
   /* align-items: center; */
+
+  
+.noto-sans-thai-<uniquifier> {
+  font-family: "Noto Sans Thai", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
 }
 .header {
   display: flex;
