@@ -1,0 +1,61 @@
+* {
+  padding: 0;
+  margin: 0;
+  /* justify-content: center; */
+  /* align-items: center; */
+}
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+}
+.header img {
+  width: 20vh;
+  height: 20vh;
+  border-radius: 100%;
+  object-fit: cover;
+}
+.manu {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+.manu .social {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 15px;
+  width: 35vh;
+  height: 3vh;
+  align-items: center;
+  display: flex;
+  gap: 10px;
+  color: black;
+}
+.manu .qrcode {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 20px;
+    width: 35vh;
+    height: 35vh;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    gap: 10px;
+    color: black;
+    overflow: hidden;
+}
+.manu .qrcode img{
+    width: 35vh;
+    height: 35vh;
+}
+.custom-divider {
+    width: 35vh; /* กำหนดความยาวของเส้น */
+    height: 1.5px; /* ความหนาของเส้น */
+    background-color: #cfcfcf; /* สีของเส้น */
+    margin: 20px auto; /* จัดให้อยู่กึ่งกลาง */
+    border-radius: 100px;
+}
+

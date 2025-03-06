@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../Styles/style.css" />
+    <link
+      rel="shortcut icon"
+      href="../Assets/Images/1.png"
+      type="image/x-icon"
+    />
+    <title>Chachom</title>
+
+    <style>
+      /* ส่วนของ Loader */
+      #loader {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 9999;
+      }
+      #loader img {
+        width: 120px;
+        height: 120px;
+        animation: fadeIn 1.5s infinite alternate;
+      }
+      /* @keyframes fadeIn {
+            from { opacity: 0.5; }
+            to { opacity: 1; }
+        } */
+
+      /* ซ่อนเนื้อหาหลักไว้ก่อน */
+      #content {
+        display: none;
+      }
+
+      /* ซ่อน scrollbar แต่ยังคงให้เลื่อนได้ */
+      body,
+      html {
+        overflow: scroll; /* ซ่อน scrollbar โดยไม่ให้แสดง */
+      }
+      /* ซ่อน scrollbar สำหรับเว็บเบราว์เซอร์ที่ใช้ Webkit (Chrome, Safari, Edge) */
+      ::-webkit-scrollbar {
+        display: none; /* ซ่อน scrollbar */
+      }
+    </style>
+  </head>
+  <body>
+    <!-- LOADER -->
+    <div id="loader">
+      <img id="loading-image" src="../Assets/Images/1.png" alt="Loading..." />
+    </div>
+
+    <div
+      style="text-align: center; align-items: center; justify-content: center"
+    >
+      <div class="header">
+        <div class="img">
+          <img src="../Assets/Images/ImageVote.jpg" alt="" />
+        </div>
+      </div>
+      <div
+        style="
+          display: flex;
+          gap: 5px;
+          align-items: center;
+          justify-content: center;
+        "
+      >
+        <div
+          style="
+            align-content: center;
+            justify-content: center;
+            display: flex;
+            font-family: outfit;
+            font-size: 26px;
+          "
+        >
+          <p>Chachom</p>
+        </div>
+        <div
+          style="display: flex; align-items: center; justify-content: center"
+        >
+          <img
+            src="../Assets/Images/Veryify.png"
+            alt=""
+            width="14"
+            height="14"
+          />
+        </div>
+      </div>
+      <div
+        style="
+          align-content: center;
+          justify-content: center;
+          display: flex;
+          font-family: outfit;
+          font-size: 16px;
+        "
+      >
+        <div style="text-align: center">
+          <p style="color: #bdbdbd; font-weight: 200">Sasi Nguinwan</p>
+          <p>Miss Grand Chiang Rai 2025</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="social">
+      <!-- QR -->
+      <div class="manu">
+        <div class="qrcode">
+          <img src="../Assets/Images/QRCode.jpg" alt="" />
+        </div>
+      </div>
+      <!-- ปุ่มดาวน์โหลด QR Code -->
+      <div style="text-align: center; margin-top: 10px">
+        <a href="../Assets/Images/QRCode.jpg" download="QRCode.jpg">
+          <button
+            style="
+              padding: 10px 15px;
+              font-size: 16px;
+              border: none;
+              background-color: #fff;
+              box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+              width: 40vh;
+              color: black;
+              font-family: outfit;
+              border-radius: 5px;
+              cursor: pointer;
+            "
+          >
+            Save QR Code
+          </button>
+        </a>
+      </div>
+
+      <div class="custom-divider"></div>
+
+      <!-- Popular Vote -->
+      <div class="manu">
+        <a
+          href="https://missgrandthailand.com/miss/%e0%b8%a8%e0%b8%a8%e0%b8%b4-%e0%b9%80%e0%b8%ab%e0%b8%87%e0%b8%b5%e0%b8%a2%e0%b8%99%e0%b8%a7%e0%b8%b1%e0%b8%99/?focus=profile"
+          style="text-decoration: none; font-family: outfit"
+        >
+          <div class="social">
+            <div
+              style="
+                width: 30px;
+                height: 30px;
+                border-radius: 100px;
+                overflow: hidden;
+                object-fit: cover;
+              "
+            >
+              <img
+                src="../Assets/Images/13.jpg"
+                alt=""
+                style="width: 100%; height: 100%; object-fit: cover"
+              />
+            </div>
+            <p style="font-family: outfit">Vote POPULAR VOTE (MGT13)</p>
+          </div>
+        </a>
+      </div>
+
+      <!-- Open Chat -->
+      <div class="manu">
+        <a
+          href="https://line.me/ti/g2/mvtZ5nA-7Gc_7Iszs3bX-CyVpE6zEyFQBSnAZg?utm_source=invitation&utm_medium=link_copy&utm_campaign=default"
+          style="text-decoration: none; font-family: outfit"
+        >
+          <div class="social">
+            <img
+              src="../Assets/Images/icons/OpenChat.png"
+              alt=""
+              width="30"
+              height="30"
+            />
+            <p style="font-family: Noto Sans Thai">ด้อมชาชม</p>
+          </div>
+        </a>
+      </div>
+
+      <!-- Facebook -->
+      <div class="manu">
+        <a
+          href="https://www.facebook.com/chompu.sasi"
+          style="text-decoration: none; font-family: outfit"
+        >
+          <div class="social">
+            <img
+              src="../Assets/Images/icons/Facebook.png"
+              alt=""
+              width="30"
+              height="30"
+            />
+            <p>Sasi Nguinwan</p>
+          </div>
+        </a>
+      </div>
+
+      <!-- Instagram -->
+      <div class="manu">
+        <a
+          href="https://www.instagram.com/chachompuu/"
+          style="text-decoration: none; font-family: outfit"
+        >
+          <div class="social">
+            <img
+              src="../Assets/Images/icons/Instagram.png"
+              alt=""
+              width="30"
+              height="30"
+            />
+            <p>Chachompu</p>
+          </div>
+        </a>
+      </div>
+
+      <!-- Tiktok1 -->
+      <div class="manu">
+        <a
+          href="https://www.tiktok.com/@chachomishere?_t=ZS-8uSOHwWjU40&_r=1"
+          style="text-decoration: none; font-family: outfit"
+        >
+          <div class="social">
+            <img
+              src="../Assets/Images/icons/Tiktok.png"
+              alt=""
+              width="30"
+              height="30"
+            />
+            <p>Chachomishere</p>
+            <p style="font-family: Noto Sans Thai; font-size: 12px">
+              (ช่องหลัก)
+            </p>
+          </div>
+        </a>
+      </div>
+
+      <!-- Tiktok2 -->
+      <div class="manu">
+        <a
+          href="https://www.tiktok.com/@missgrandchachom?_t=ZS-8uSOJG1aFbb&_r=1"
+          style="text-decoration: none; font-family: outfit"
+        >
+          <div class="social">
+            <img
+              src="../Assets/Images/icons/Tiktok.png"
+              alt=""
+              width="30"
+              height="30"
+            />
+            <p>Chachommissgrand</p>
+            <p style="font-family: Noto Sans Thai; font-size: 12px">
+              (ช่องสำรอง)
+            </p>
+          </div>
+        </a>
+      </div>
+
+      <!-- X -->
+      <div class="manu">
+        <a
+          href="https://x.com/Chachommishere?t=QyCUQDH6dD4fNUWL7g4HEg&s=09"
+          style="text-decoration: none; font-family: outfit"
+        >
+          <div class="social">
+            <img
+              src="../Assets/Images/icons/Twitter.png"
+              alt=""
+              width="30"
+              height="30"
+            />
+            <p>Chachommishere</p>
+          </div>
+        </a>
+      </div>
+
+      <!-- Youtube -->
+      <div class="manu">
+        <a
+          href="https://www.youtube.com/@chachompuu"
+          style="text-decoration: none; font-family: outfit"
+        >
+          <div class="social">
+            <img
+              src="../Assets/Images/icons/Youtube.png"
+              alt=""
+              width="30"
+              height="30"
+            />
+            <p>Chachompuu</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="custom-divider"></div>
+
+      <!-- Facebook -->
+      <div class="manu">
+        <a
+          href="https://www.facebook.com/ChompusasiOfficial"
+          style="text-decoration: none; font-family: outfit"
+        >
+          <div class="social">
+            <img
+              src="../Assets/Images/icons/Facebook.png"
+              alt=""
+              width="30"
+              height="30"
+            />
+            <p>Chompu Official</p>
+          </div>
+        </a>
+      </div>
+
+      <!-- Instagram -->
+      <div class="manu">
+        <a
+          href="https://www.instagram.com/chompusasi.official?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+          style="text-decoration: none; font-family: outfit"
+        >
+          <div class="social">
+            <img
+              src="../Assets/Images/icons/Instagram.png"
+              alt=""
+              width="30"
+              height="30"
+            />
+            <p>chompusasi.official</p>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <div
+      style="
+        height: 5vh;
+        justify-content: center;
+        display: flex;
+        align-items: center;
+        margin-top: 10px;
+      "
+    >
+      <p
+        style="
+          font-family: outfit;
+          font-weight: 200;
+          text-align: center;
+          color: rgb(192, 192, 192);
+          font-size: 14px;
+        "
+      >
+        © 2025 The Cen. All Rights Reserved
+      </p>
+    </div>
+
+    <script>
+      let images = ["../Assets/Images/1.png", "../Assets/Images/2.png"]; // ภาพที่ใช้สลับ
+      let currentIndex = 0;
+      let loaderImg = document.getElementById("loading-image");
+
+      // ฟังก์ชันเปลี่ยนรูปทุกๆ 0.5 วินาที
+      let imageInterval = setInterval(() => {
+        currentIndex = (currentIndex + 1) % images.length;
+        loaderImg.src = images[currentIndex];
+      }, 500); // เปลี่ยนทุก 0.5 วินาที
+
+      // ซ่อน Loader หลังจาก 2 วินาที
+      window.onload = function () {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+
+        setTimeout(() => {
+          clearInterval(imageInterval); // หยุดการสลับภาพ
+          document.getElementById("loader").style.display = "none";
+          document.getElementById("content").style.display = "block";
+        }, 2000); // 2 วินาที
+      };
+
+    </script>
+  </body>
+</html>
