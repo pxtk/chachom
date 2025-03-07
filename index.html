@@ -407,6 +407,20 @@
           document.getElementById("content").style.display = "block";
         }, 2000); // 2 วินาที
       };
+
+        // ตรวจสอบว่าผู้ใช้เปิดเว็บจาก In-App Browser หรือไม่
+  function isInAppBrowser() {
+    let ua = navigator.userAgent || navigator.vendor || window.opera;
+    return (/FBAN|FBAV|Instagram|Line|Twitter/i.test(ua));
+  }
+
+  // ถ้าใช่ ให้เปิดลิงก์ในเบราว์เซอร์หลัก
+  if (isInAppBrowser()) {
+    window.location.href = "googlechrome://navigate?url=" + window.location.href;
+    setTimeout(() => {
+      window.location.href = "https://pxtk.github.io/chachom/";
+    }, 1000);
+  }
     </script>
   </body>
 </html>
